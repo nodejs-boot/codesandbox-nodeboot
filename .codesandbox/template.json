@@ -1,0 +1,7 @@
+{
+  "title": "Node-Boot",
+  "description": "The official Node-Boot codesandbox template by the Node-Boot team",
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/nest/.codesandbox/icon.png",
+  "tags": ["backend", "nest", "node", "javascript", "typescript"],
+  "published": true
+}
