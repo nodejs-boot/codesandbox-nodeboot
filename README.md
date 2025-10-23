@@ -2,6 +2,8 @@
 
 A comprehensive sample Node-Boot application using native `node:http` framework that demonstrates best practices for building scalable TypeScript applications with dependency injection, validation, persistence, and more.
 
+[Code Sandbox - Play with It](https://codesandbox.io/p/github/nodejs-boot/codesandbox-nodeboot/main)
+
 ## 🚀 Quick Start
 
 ### Prerequisites
