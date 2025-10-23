@@ -1,25 +1,57 @@
 {
-  // These tasks will run in order when initializing your CodeSandbox project.
   "setupTasks": [
     {
-      "name": "Install Dependencies",
-      "command": "pnpm install"
+      "command": "pnpm install",
+      "name": "Install Dependencies"
     }
   ],
 
-  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
   "tasks": {
     "dev": {
-      "name": "Start Dev Server",
+      "name": "Start Dev Server (Swagger UI)",
       "command": "pnpm dev",
       "runAtStart": true,
       "preview": {
-        "port": 3000
+        "port": 3000,
+        "open": true,
+        "url": "http://localhost:3000/api-docs"
       },
       "restartOn": {
-        "files": ["./pnpm-lock.yaml"]
+        "files": ["./pnpm-lock.yaml"],
+        "branch": false,
+        "clone": false,
+        "resume": false
       }
     },
+
+    "preview-openapi-json": {
+      "name": "Preview: OpenAPI JSON",
+      "command": "pnpm dev",
+      "preview": {
+        "port": 3000,
+        "open": true,
+        "url": "http://localhost:3000/api-docs/swagger.json"
+      }
+    },
+    "preview-actuator": {
+      "name": "Preview: Actuator",
+      "command": "pnpm dev",
+      "preview": {
+        "port": 3000,
+        "open": true,
+        "url": "http://localhost:3000/actuator"
+      }
+    },
+    "preview-sample": {
+      "name": "Preview: API Sample (Users)",
+      "command": "pnpm dev",
+      "preview": {
+        "port": 3000,
+        "open": true,
+        "url": "http://localhost:3000/api/v1/users/"
+      }
+    },
+
     "start-app": {
       "name": "Start App",
       "command": "pnpm start"
@@ -30,24 +62,24 @@
     },
     "build": {
       "name": "Build",
-      "command": "pnpm build",
-      "runAtStart": false
+      "command": "pnpm build"
     },
     "lint": {
       "name": "Lint",
-      "command": "pnpm lint",
-      "runAtStart": false
+      "command": "pnpm lint"
     },
     "test": {
       "name": "Run Tests",
-      "command": "pnpm test",
-      "runAtStart": false
+      "command": "pnpm test"
     },
     "install": {
       "name": "Install Dependencies",
       "command": "pnpm install",
       "restartOn": {
-        "files": ["./package.json"]
+        "files": ["./package.json"],
+        "branch": false,
+        "clone": false,
+        "resume": false
       }
     }
   }
